@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css_files %}{% endblock  %} <!-- Static dosyalarımızdan olan css Base.html  için entegre edicez-->
+    <title>{% block page_title  %}{% endblock  %}</title> <!-- Base.html sayfasını kalıtan tüm alt html'ler kendi baslikları olacak -->
+</head>
+<body>
+
+    {% block content %}{% endblock  %} <!-- Base.html sayfasını kalıtan tüm alt html'ler kendi content alanına sahip olacak-->
+
+
+
+    {% block js_files %}{% endblock  %}  <!--Static dosyalarımızdan olan js Base.html  için entegre edicez -->
+</body>
+</html>
