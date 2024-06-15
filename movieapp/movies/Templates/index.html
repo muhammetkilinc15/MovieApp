@@ -1,12 +1,15 @@
-{% extends "movies/base.html" %} <!-- -->
+{% extends "movies/base.html" %}
+<!-- -->
+{% load static %} <!-- Base.html içindeki dosyalarında burada çalışması için -->
 
-{% block page_title %}
-Index
+
+{% block css_files %} 
+<link rel="stylesheet" type="text/css" href="{% static "vendor/slick/slick.min.css" %}" />     <!-- Index Sayfasina özel css dosyası-->
+<link rel="stylesheet" type="text/css" href="{% static "vendor/slick/slick-theme.min.css" %}"/> <!-- Index Sayfasina özel css dosyası-->
 {% endblock %}
 
 
-
-{% block content %}
+{% block page_title %} Index {% endblock %} {% block content %}
 
 <h2>Index</h2>
 {% endblock %}
