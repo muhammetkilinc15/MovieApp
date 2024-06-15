@@ -6,10 +6,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    return  HttpResponse("Index")
+    return  render(request,"index.html")
 
 def movies(request):
-    return  HttpResponse("Movies")
+    return  render(request,"movies.html")
 
 def movie_details(request,slug):
-    return  HttpResponse("Movie_details "+slug)
+    return  render(request,"movies_details.html",{
+        "slug":slug
+    })
