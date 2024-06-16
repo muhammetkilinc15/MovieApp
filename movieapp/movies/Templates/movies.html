@@ -22,15 +22,9 @@
 
                     <div class="col">
                         <div class="row">
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
-                            {% include "partials/_movie.html" %}
+                            {% for  movie in movies %}    
+                                {% include "partials/_movie.html" %}
+                            {% endfor %}  
                         </div>
                         <div class="text-center mt-1 mb-4 col-12">
                             <div class="spinner-border" role="status">
