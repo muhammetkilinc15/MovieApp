@@ -26,7 +26,7 @@ To set up this project locally, follow these steps:
 1-Clone the repository:
 
 ```javascript
-git clone https://github.com/username/moviea.git
+git clone https://github.com/muhammetkilinc15/MovieApp.git
 cd moviea
 ```
 
