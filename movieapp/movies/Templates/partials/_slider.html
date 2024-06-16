@@ -5,10 +5,7 @@
       <div class="osahan-slider-item">
          <a href="{% url "movie_details" slider.url %}">
             <img src="{% static 'img/'|add:slider.imageUrl %}"  class="img-fluid rounded"  alt="..."/>
-            {{slider.imageUrl}}
-
          </a>
-       
       </div>   
    {% endfor %}
   
