@@ -170,7 +170,7 @@
                   role="tabpanel"
                   aria-labelledby="home-tab"
                 >
-                  {{movie.description}}
+               
                 </div>
                 <div
                   class="tab-pane fade"
@@ -178,214 +178,32 @@
                   role="tabpanel"
                   aria-labelledby="profile-tab"
                 >
-                  <div class="row">
-                    <div class="col-xl-4 col-lg-4">
-                      <h5 class="h6 mt-0 mb-3 font-weight-bold text-gray-900">
-                        CAST
-                      </h5>
-                      <div class="artist-list mb-3">
+                <h5 class="h6 mt-0 mb-3 font-weight-bold text-gray-900">
+                  CAST
+                </h5>
+                  <div class="row">                  
+                      {% for person in people  %}
+                      <div class="artist-list mb-3 col-3">        
                         <a class="d-flex align-items-center" href="#">
                           <div class="dropdown-list-image mr-3">
                             <img
                               class="rounded-circle"
-                              src="img/s1.png"
+                              src="{% static "img/"|add:person.image_name %}"
                               alt=""
                             />
                             <div class="status-indicator bg-success"></div>
                           </div>
                           <div class="font-weight-bold">
-                            <div class="text-truncate">Carla Gugino</div>
-                            <div class="small text-gray-500">Acting</div>
+                            <div class="text-truncate">{{person.full_name}}</div>
+                            <div class="small text-gray-500">{{person.duty_type}}</div>
                           </div>
                         </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s2.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Sylvester Stallone</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s3.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Rose Byrne</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s4.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Jason Statham</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
+                     
+                      {% endfor %}
+                     
+                    
                     </div>
-                    <div class="col-xl-4 col-lg-4">
-                      <h5 class="h6 mt-0 mb-3 font-weight-bold text-gray-900">
-                        CREW
-                      </h5>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s3.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Rose Byrne</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s4.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Jason Statham</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s1.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Carla Gugino</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s2.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Sylvester Stallone</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                      <h5 class="h6 mt-0 mb-3 font-weight-bold text-gray-900">
-                        Support
-                      </h5>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s1.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Carla Gugino</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s2.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Sylvester Stallone</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s3.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Rose Byrne</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="artist-list mb-3">
-                        <a class="d-flex align-items-center" href="#">
-                          <div class="dropdown-list-image mr-3">
-                            <img
-                              class="rounded-circle"
-                              src="img/s4.png"
-                              alt=""
-                            />
-                            <div class="status-indicator bg-success"></div>
-                          </div>
-                          <div class="font-weight-bold">
-                            <div class="text-truncate">Jason Statham</div>
-                            <div class="small text-gray-500">Acting</div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
                 <div
